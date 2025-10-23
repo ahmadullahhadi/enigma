@@ -1,0 +1,34 @@
+services:
+  music-bot:
+    build: .
+    image: discord-music-bot:latest
+    container_name: discord-music-bot
+    restart: unless-stopped
+    
+    # Environment variables
+    env_file:
+      - .env
+    
+    # Optional: mount volumes for caching yt-dlp data
+    volumes:
+      - ./cache:/app/cache:rw
+    
+    # Network mode (default bridge is fine)
+    network_mode: bridge
+    
+    # Resource limits (optional but recommended)
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

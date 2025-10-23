@@ -1,0 +1,16 @@
+# Discord bot dependencies
+discord.py>=2.3.2
+aiohttp>=3.9.0
+
+# YouTube and audio processing
+yt-dlp>=2024.10.0
+
+# Voice support
+PyNaCl>=1.5.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Additional dependencies for download-first playback
+# (These are typically included with yt-dlp but explicit for clarity)
+ffmpeg-python>=0.2.0
