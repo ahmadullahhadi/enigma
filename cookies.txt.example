@@ -1,0 +1,18 @@
+# Netscape HTTP Cookie File
+# This is a generated file! Do not edit.
+# 
+# IMPORTANT: This is just an example file showing the format.
+# You need to export your actual cookies from your browser.
+#
+# See YOUTUBE_COOKIES_GUIDE.md for instructions on how to export cookies.
+#
+# Once you have your cookies.txt file:
+# 1. Place it in this directory (same folder as this example file)
+# 2. Rename it to just "cookies.txt" (remove .example)
+# 3. Restart the bot
+#
+# Your actual cookies.txt should contain lines like:
+# .youtube.com	TRUE	/	TRUE	1234567890	COOKIE_NAME	cookie_value
+#
+# DO NOT commit your actual cookies.txt to Git - it contains sensitive data!
+# The file cookies.txt is already in .gitignore for your protection.

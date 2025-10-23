@@ -1,6 +1,9 @@
 # Environment variables
 .env
 
+# YouTube cookies (contains sensitive authentication data)
+cookies.txt
+
 # Python
 __pycache__/
 *.py[cod]

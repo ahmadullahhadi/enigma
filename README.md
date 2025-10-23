@@ -267,6 +267,18 @@ brew install ffmpeg
 - Some videos may be region-locked or age-restricted
 - Try a different video or search query
 
+### YouTube "Sign in to confirm you're not a bot" Error
+
+YouTube now requires cookies for authentication. **See [YOUTUBE_COOKIES_GUIDE.md](YOUTUBE_COOKIES_GUIDE.md) for detailed setup instructions.**
+
+**Quick Fix:**
+1. Install browser extension: [Get cookies.txt LOCALLY](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)
+2. Login to YouTube in your browser
+3. Export cookies to `cookies.txt` in bot directory
+4. Restart bot: `docker-compose restart` (or `python bot.py`)
+
+The bot will automatically use cookies from `./cookies.txt` if present.
+
 ### Bot Not Responding
 
 - Check bot is online in Discord

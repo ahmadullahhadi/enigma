@@ -12,6 +12,7 @@ services:
     # Optional: mount volumes for caching yt-dlp data
     volumes:
       - ./cache:/app/cache:rw
+      - ./cookies.txt:/app/cookies.txt:ro  # YouTube cookies for authentication
     
     # Network mode (default bridge is fine)
     network_mode: bridge

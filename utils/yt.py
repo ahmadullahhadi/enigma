@@ -25,6 +25,7 @@ YTDL_OPTIONS = {
     'source_address': '0.0.0.0',
     'extract_flat': False,  # We need full info, not just IDs
     'skip_download': True,  # We only need the URL, not the file
+    'cookiefile': os.getenv('YT_COOKIES_PATH', './cookies.txt') if os.path.exists(os.getenv('YT_COOKIES_PATH', './cookies.txt')) else None,  # Cookie file for YouTube auth
 }
 
 # yt-dlp options for downloading audio files (download-first mode)
@@ -41,6 +42,7 @@ YTDL_DOWNLOAD_OPTIONS = {
     'extract_flat': False,
     'skip_download': False,  # We want to download the file
     'outtmpl': '%(title)s.%(ext)s',  # Will be overridden with temp path
+    'cookiefile': os.getenv('YT_COOKIES_PATH', './cookies.txt') if os.path.exists(os.getenv('YT_COOKIES_PATH', './cookies.txt')) else None,  # Cookie file for YouTube auth
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
@@ -60,6 +62,7 @@ YTDL_PLAYLIST_OPTIONS = {
     'extract_flat': True,  # Fast extraction - gets all entries with basic info
     'skip_download': True,
     'playlistend': None,  # No limit on playlist entries
+    'cookiefile': os.getenv('YT_COOKIES_PATH', './cookies.txt') if os.path.exists(os.getenv('YT_COOKIES_PATH', './cookies.txt')) else None,  # Cookie file for YouTube auth
 }
 
 # FFmpeg options for stable Discord voice streaming
